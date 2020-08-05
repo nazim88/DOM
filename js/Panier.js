@@ -35,12 +35,19 @@ function clicLike() {
 }
 /******************************remove article function***************/
 for (Delete = 0; Delete < Deletes.length; Delete++) {
-  Deletes[Delete].addEventListener("click", clicSpan);
+  Deletes[Delete].addEventListener("click", deleteClick);
 }
-function clicSpan() {
-  this.parentElement.parentElement.remove();
+function deleteClick() {
+  let res = confirm("Are you sure you want to delete ?");
+    if(res){
+      this.parentElement.parentElement.remove();
+      
+    }
+  
+
 }
 /************************** see total price function*****************/
+
 function calcul() {
   let total = price[0].value * quantite[0].value
   totals[0].value = total
@@ -51,6 +58,5 @@ function calcul() {
   let total3 = price[2].value * quantite[2].value
   totals[2].value = total3
 
-  let all = total + total2 + total3
-  sums.value = all.toFixed(2);
+  sums.value = (total + total2 + total3).toFixed(2);
 }
