@@ -111,6 +111,7 @@ figure {
   border-right: none;
   border-bottom: solid 1px #a3a3a3;
   text-align: center;
+  width: 88.5%;
 }
 .section2 .right {
   padding-top: 2%;
@@ -320,6 +321,8 @@ footer {
     margin-top: 0%;
     text-align: center;
     margin-bottom: 0;
+    width: 76%;;
+    
   }
   footer {
     text-align: center;
