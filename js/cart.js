@@ -14,15 +14,17 @@ for (add = 0; add < adds.length; add++) {
   function count(event) {
     n++;
     this.nextElementSibling.value = n;
-    let total = prices[0].value * quantites[0].value
-    totals[0].value = total
+    let total = (prices[0].value) * (quantites[0].value)
+    totals[0].value = ((new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' })).format(total))   
   
-    let total2 = prices[1].value * quantites[1].value
-    totals[1].value = total2
+    let total2 = (prices[1].value) * (quantites[1].value)
+    totals[1].value = ((new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' })).format(total2))
   
-    let total3 = prices[2].value * quantites[2].value
-    totals[2].value = total3
-    sums.value = (total + total2 + total3).toFixed(2);
+    let total3 = (prices[2].value) * (quantites[2].value)
+    totals[2].value = ((new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' })).format(total3))
+
+    sums.value =  ((new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' })).format(total + total2 + total3));
+
     }
   for (remove = 0; remove < removes.length; remove++) {
     removes[remove].addEventListener("click", countm);
@@ -32,14 +34,15 @@ for (add = 0; add < adds.length; add++) {
       }
       this.previousElementSibling.value = n2;
       let total = prices[0].value * quantites[0].value
-    totals[0].value = total
+    totals[0].value = ((new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' })).format(total))
   
     let total2 = prices[1].value * quantites[1].value
-    totals[1].value = total2
+    totals[1].value = ((new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' })).format(total2))
   
     let total3 = prices[2].value * quantites[2].value
-    totals[2].value = total3
-    sums.value = (total + total2 + total3).toFixed(2);
+    totals[2].value = ((new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' })).format(total3))
+
+     sums.value =  ((new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' })).format(total + total2 + total3));
     }
   }
 }
