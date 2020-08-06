@@ -70,7 +70,7 @@ figure {
 }
 
 .section1 .labelTotal {
-  margin-left: 56%;
+  margin-left: 54%;
 }
 .section1 .labelPrice input {
   border: none;
@@ -86,7 +86,7 @@ figure {
   text-align: center;
 }
 .section1 .total {
-  width: 12%;
+  width: 16%;
   border: none;
   background: none;
   font-size: 1em;
@@ -139,7 +139,7 @@ figure {
 }
 
 .remove {
-  color: #a1a1a1;
+  color: #5b5b5b;
   padding-top: 32%;
 }
 .remove:hover {
@@ -234,7 +234,7 @@ footer {
   }
 
   .section1 .labelTotal {
-    margin-left: 19%;
+    margin-left: 15%;
   }
   .section1 .labelPrice input {
     border: none;
@@ -250,7 +250,7 @@ footer {
     text-align: center;
   }
   .section1 .total {
-    width: 25%;
+    width: 31%;
     border: none;
     background: none;
     font-size: 1em;
