@@ -8,44 +8,43 @@ let quantites = document.querySelectorAll(".Quantity");
 let totals = document.querySelectorAll(".total");
 let sums = document.querySelector(".global");
 /**********************add quantity  function*****************/
+let n = 0;
 for (add = 0; add < adds.length; add++) {
-  let n = 0;
-  adds[add].addEventListener("click", count);
-  function count(event) {
-    n++;
-    this.nextElementSibling.value = n;
+    
+    adds[add].addEventListener("click", countUp);
+    function countUp(event) {
+      if(n >=0){
+        n++
+      } 
+     this.nextElementSibling.value = n;
     let total = (prices[0].value) * (quantites[0].value)
     totals[0].value = ((new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' })).format(total))   
-  
     let total2 = (prices[1].value) * (quantites[1].value)
-    totals[1].value = ((new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' })).format(total2))
-  
+    totals[1].value = ((new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' })).format(total2))  
     let total3 = (prices[2].value) * (quantites[2].value)
     totals[2].value = ((new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' })).format(total3))
-
     sums.value =  ((new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' })).format(total + total2 + total3));
-
-    }
-  for (remove = 0; remove < removes.length; remove++) {
-    removes[remove].addEventListener("click", countm);
-    function countm(event) {
-      if (n > -1) {
-        n2 = n--;
-      }
-      this.previousElementSibling.value = n2;
-      let total = prices[0].value * quantites[0].value
-    totals[0].value = ((new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' })).format(total))
-  
-    let total2 = prices[1].value * quantites[1].value
-    totals[1].value = ((new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' })).format(total2))
-  
-    let total3 = prices[2].value * quantites[2].value
-    totals[2].value = ((new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' })).format(total3))
-
-     sums.value =  ((new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' })).format(total + total2 + total3));
-    }
+         
+       
+    }  
+}
+for (remove = 0; remove < removes.length; remove++){
+  removes[remove].addEventListener("click", countDown);
+  function countDown(event) {
+    if (n >= 1) {
+      n--;
+     }
+  this.previousElementSibling.value = n;
+    let total = prices[0].value * quantites[0].value
+  totals[0].value = ((new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' })).format(total))  
+  let total2 = prices[1].value * quantites[1].value
+  totals[1].value = ((new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' })).format(total2))  
+  let total3 = prices[2].value * quantites[2].value
+  totals[2].value = ((new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' })).format(total3))
+   sums.value =  ((new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' })).format(total + total2 + total3));
   }
 }
+
 /***************************like button function ******************/
 for (like = 0; like < likes.length; like++) {
   likes[like].addEventListener("click", clicLike);

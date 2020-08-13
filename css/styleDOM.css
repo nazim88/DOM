@@ -92,12 +92,15 @@ figure {
   font-size: 1em;
   text-align: right;
   color: #4d4d4d;
+  
 }
 .section1 .add:hover {
   color: #1bb23f;
+  cursor: pointer;
 }
 .section1 .rem:hover {
   color: #b93737;
+  cursor: pointer;
 }
 .section2 input {
   text-align: center;
@@ -145,13 +148,16 @@ figure {
 }
 .remove:hover {
   color: #b73636;
+  cursor: pointer;
 }
 .like {
   margin-left: 80%;
+  cursor: pointer;
 }
 .red {
   color: #b73636;
   animation: heartbeat 1s infinite;
+  cursor: pointer;
 }
 
 @-webkit-keyframes heartbeat {
